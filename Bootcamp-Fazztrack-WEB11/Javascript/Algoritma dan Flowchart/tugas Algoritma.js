@@ -8,38 +8,40 @@
 //       // console.log(newString);
 
 // Palindrome
-// 	var str = "malam";
-//     var len = str.length;
-//     var mid = len / 2;
-// if (len > 1) {
-
-//     for (var i = 0; i < mid; i++) {
-//     var revStr = str[len - 1 - i];
-//         if (str[i] !== revStr) {
-//             console.log("Bukan Palindrome");
+// console.log(palindrome("malam"));
+// function palindrome(str) {
+//     if (str.length > 1) {
+//         for (var i = 0; i < str.length / 2; i++) {
+//             if (str[i] != str[str.length - 1 - i]) {
+//                 return "Bukan Palindrome";
+//             } else {
+//                 return "Palindrome";
+//             }
 //         }
+//     } else {
+//         console.log("input str dengan benar");
 //     }
-//     console.log("Palindrome");
-
-// }else {
-//     console.log("input str")
 // }
 
 // Konsonan Vocal
 // let str = "jakarta";
 // let tempA;
+// function checkA(str){
 // if (str.length > 0) {
 //     for (let i = 0; i < str.length; i++) {
 //         tempA = str[i];
-//         console.log(tempA);
+//         // console.log(tempA);
 //         if (tempA === "a") {
 //             tempA = "o";
-//             console.log(tempA);
+//             // console.log((str[i] = "o"));
 //         } else {
-//             console.log(tempA);
+//             tempA;
+//             // console.log(tempA);
 //         }
 //         console.log(tempA);
 //     }
 // } else {
 //     console.log("String Kosong");
 // }
+// }
+// checkA("Bandung");
