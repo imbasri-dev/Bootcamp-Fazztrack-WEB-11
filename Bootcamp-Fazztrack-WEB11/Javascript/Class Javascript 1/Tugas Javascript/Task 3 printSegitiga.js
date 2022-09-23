@@ -28,4 +28,4 @@ const printSegitiga = (number) => {
         console.log("masukan tipe number dengan benar!");
     }
 };
-printSegitiga(5);
+printSegitiga(6);

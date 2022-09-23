@@ -18,7 +18,6 @@ Grade = B
  */
 
 const averageUN = (bahasaIndonesia, bahasaInggris, matematika, ipa) => {
-    let rataRata = (bahasaIndonesia + bahasaInggris + matematika + ipa) / 4;
     // console.log(rataRata);
     if (
         typeof bahasaIndonesia === "number" &&
@@ -26,6 +25,7 @@ const averageUN = (bahasaIndonesia, bahasaInggris, matematika, ipa) => {
         typeof matematika === "number" &&
         typeof ipa === "number"
     ) {
+        let rataRata = (bahasaIndonesia + bahasaInggris + matematika + ipa) / 4;
         if (rataRata >= 90 && rataRata <= 100) {
             console.log(`Rata-rata = ${rataRata}`);
             console.log("Grade = A");
@@ -46,5 +46,4 @@ const averageUN = (bahasaIndonesia, bahasaInggris, matematika, ipa) => {
         console.log("Input Nilai Dengan Benar!");
     }
 };
-averageUN(80, 90, 14, 80); // trigger fcuntion averageUN
 averageUN(80, 90, 89, 69); // trigger fcuntion averageUN

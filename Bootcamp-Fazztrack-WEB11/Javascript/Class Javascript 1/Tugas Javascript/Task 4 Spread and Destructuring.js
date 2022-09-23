@@ -32,13 +32,14 @@ const newData = {
 const result = { ...data, ...newData };
 console.log(result);
 // cara 1
-const { address } = data;
-const { street, city } = address;
-console.log(`street :${street} city: ${city}`);
+// const { address } = data;
+// const { street, city } = address;
+// console.log(`street :${street} city: ${city}`);
 
 // cara 2
-// const {
-//     address: { street },
-//     address: { city },
-// } = data;
-// console.log(`street :${street} city: ${city}`);
+const {
+    email,
+    address: { street, city },
+} = data;
+console.log(`street :${street} city: ${city}`);
+console.log(email);
