@@ -17,7 +17,7 @@ const biodata = {
     schoolList: [
         {
             name: "SDN 17 Pagi Cakung Barat",
-            yearsIn: 2006,
+            yearsIn: 2002,
             yearsOut: 2008,
             major: null,
         },
