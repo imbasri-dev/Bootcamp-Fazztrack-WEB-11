@@ -14,18 +14,19 @@ Output:
 
 */
 
+let numbers = "";
 const printSegitiga = (number) => {
-    if (typeof number === "number") {
+    // console.log(typeof number);
+    if (isNaN(number) === false) {
         for (let i = 1; i <= number; i++) {
-            let numbers = "";
             for (let j = number; j >= i; j--) {
                 numbers += number - j + 1; //numbers disini adalah paramternya.
                 numbers += " ";
             }
-            console.log(numbers);
         }
+        console.log(numbers);
     } else {
         console.log("masukan tipe number dengan benar!");
     }
 };
-printSegitiga(6);
+printSegitiga("5");

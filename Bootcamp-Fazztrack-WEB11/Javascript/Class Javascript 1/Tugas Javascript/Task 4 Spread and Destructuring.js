@@ -38,8 +38,6 @@ console.log(result);
 
 // cara 2
 const {
-    email,
     address: { street, city },
 } = data;
 console.log(`street :${street} city: ${city}`);
-console.log(email);
