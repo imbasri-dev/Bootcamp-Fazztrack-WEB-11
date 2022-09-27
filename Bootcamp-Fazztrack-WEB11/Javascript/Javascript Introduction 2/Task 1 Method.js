@@ -1,17 +1,15 @@
 /*
 Task 1 Buat dan jelaskanlah 5 method bawaan JavaScript (Built-in Functions) beserta contoh penggunaannya
-
 dengan format :
 // nama method
 // mutable / imutable
 // DESKRIPSI
 // contoh fungsi
-
 */
 /*
 METHOD : concat()
 TYPE immutable : Menggabungkan dua atau lebih array. Metode ini mengembalikan array baru tanpa mengubah array yang ada.
-DESKRIPSI : method concat membuat array baru. Array pertama-tama akan diisi oleh elemen-elemen dalam objek yang dipanggil.
+DESKRIPSI : method concat membuat array baru. Array pertama-tama akan diisi oleh elemen-elemen dalam array yang dipanggil.
 Kemudian, untuk setiap argumen, nilainya akan digabungkan ke dalam array,
 argumen itu sendiri akan menjadi elemen array terakhir mirip seperti menggunakan spread operator;
 contoh concat :
@@ -27,7 +25,7 @@ console.log(menus);
 METHOD : pop()
 TYPE mutable : Metode pop adalah metode bermutasi / merubah. mengubah panjang dan konten ini.
 DESKRIPSI : Menghapus elemen terakhir dari array dan mengembalikannya. Jika array kosong,
-undefined dikembalikan dan array tidak diubah.
+undefined.
 contoh pop :
 */
 const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
@@ -45,6 +43,7 @@ contoh unshift :
 const angka = [1, 2, 3];
 console.log(angka);
 angka.unshift(4, 5);
+console.log(angka);
 let data = angka.unshift(4, 5);
 console.log(data);
 console.log(angka);
@@ -58,13 +57,14 @@ contoh shift :
 const dataShift = [1, 2, 3];
 console.log(dataShift);
 console.log(dataShift.shift());
+console.log(dataShift);
 const firstElement = dataShift.shift();
 console.log("Data yang dihapus :", firstElement);
 console.log(dataShift);
 
 /*
 METHOD : toString()
- TYPE immutable : Metode toString adalah metode immutable /tidak merubah array yang sebelum digunakan method.
+TYPE immutable : Metode toString adalah metode immutable /tidak merubah array yang sebelum digunakan method.
 DESKRIPSI : mengubah value/nilai dari array menjadi type data String.
 contoh toString :
 */
@@ -75,3 +75,4 @@ console.log(typeof arr[0].toString());
 let arrString = arr.toString();
 console.log(arrString);
 console.log(typeof arrString[0]);
+console.log(arr);

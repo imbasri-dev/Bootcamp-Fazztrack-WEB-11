@@ -10,10 +10,8 @@ Output: [8, 14, 17]
 SeleksiNilai(15, 3 , [2, 25, 4, 14, 17, 30, 8])
 Output:
 “Nilai akhir harus lebih besar dari nilai awal”
-
 SeleksiNilai(4, 17 , [2, 25, 4])
 */
-const dataArr = [1, 2, 4, 5, 6, 8, 10, 15, 20];
 const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArr) => {
     if (typeof nilaiAwal !== "number" || typeof nilaiAkhir !== "number")
         return "nilai awal dan Akhir harus Number!";
@@ -21,8 +19,11 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArr) => {
         return "nilai akhir harus lebih besar dari nilai awal";
     if (dataArr.length <= 5) return "Jumlah data harus lebih dari 5";
     const result = dataArr.filter((num) => num > nilaiAwal && num < nilaiAkhir);
+    // return result.sort((a, b) => a - b);
     return result.sort((a, b) => {
-        b - a;
+        return a - b;
     });
 };
-console.log(seleksiNilai(1, 15, dataArr));
+console.log(seleksiNilai(1, 15, [1, 2, 5, 6, 5, 11, 8, 10, 15, 20]));
+console.log(seleksiNilai(5, 1, [1, 2, 5, 6, 5, 11, 8, 10, 15, 20]));
+console.log(seleksiNilai(1, 15, [1, 2, 5, 6, 5]));
