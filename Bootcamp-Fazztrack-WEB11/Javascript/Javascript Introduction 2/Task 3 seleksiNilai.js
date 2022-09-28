@@ -17,6 +17,10 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArr) => {
         return "nilai awal dan Akhir harus Number!";
     if (nilaiAwal > nilaiAkhir)
         return "nilai akhir harus lebih besar dari nilai awal";
+    console.log(typeof dataArr);
+    if (!Array.isArray(dataArr)) {
+        return "Data dimasukan harus array serta isi arraynya!";
+    }
     if (dataArr.length <= 5) return "Jumlah data harus lebih dari 5";
     const result = dataArr.filter((num) => num > nilaiAwal && num < nilaiAkhir);
     // return result.sort((a, b) => a - b);
@@ -27,3 +31,4 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArr) => {
 console.log(seleksiNilai(1, 15, [1, 2, 5, 6, 5, 11, 8, 10, 15, 20]));
 console.log(seleksiNilai(5, 1, [1, 2, 5, 6, 5, 11, 8, 10, 15, 20]));
 console.log(seleksiNilai(1, 15, [1, 2, 5, 6, 5]));
+console.log(seleksiNilai(1, 15, {}));

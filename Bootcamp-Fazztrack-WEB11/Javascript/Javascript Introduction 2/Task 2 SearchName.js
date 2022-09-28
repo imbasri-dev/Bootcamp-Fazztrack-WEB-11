@@ -5,7 +5,6 @@ searchName(“an”, 3, callback)
 Output:
 [“Alexandra”,”Amanda”,”Angela”]
 */
-let animal = ["Ayam", "Singa", "Cacing", "Kucing"];
 const name = [
     "Abigail",
     "Alexandra",
@@ -23,22 +22,19 @@ const name = [
     "Olivia",
     "Penelope",
 ];
-// const data1 = 10;
 const toLower = (data) => {
-    // validasi
-    if (typeof data !== "object") return "data bukan object / array ";
     data = data.map((item) => item.toLowerCase());
     return data;
 };
-
 // console.log(toLower(toLower(data1)));
 const searchName = (string, dataTo, callback) => {
     // validasi
     if (typeof string !== "string") return "input harus string!";
     if (typeof dataTo !== "number") return "dataTo harus number!";
+    if (typeof callback !== "function") return "callback not function!";
     if (dataTo <= 0) return "input harus lebih dari 0";
     let dataTemp = [];
-    for (const str of callback) {
+    for (const str of callback(name)) {
         // console.log(str) //nilai dari semua element.
         // console.log(str.indexOf(string));
         // jika nilai tidak ada maka return  -1, default 0 sampai nemu index array ya.
@@ -54,13 +50,13 @@ const searchName = (string, dataTo, callback) => {
             }
         }
     }
-    // console.log(dataTo);
-    // console.log(dataTemp.length);
     if (dataTo !== dataTemp.length) {
-        return `Data yang dicari melebihi sampai ${dataTemp.length}`;
+        // console.log(dataTo);
+        // console.log(dataTemp.length);
+        return `Error data yang dicari melebihi sampai ${dataTemp.length}.`;
     }
+
     return dataTemp;
 };
-console.log(searchName("an", 4, toLower(name)));
-// console.log(searchName("ci", 3, toLower(animal)));
+console.log(searchName("an", 3, toLower));
 // batasan tidak lebih dari nilai
