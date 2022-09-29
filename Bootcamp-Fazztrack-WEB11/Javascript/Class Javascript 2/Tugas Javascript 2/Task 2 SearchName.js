@@ -36,6 +36,7 @@ const searchName = (string, dataTo, callback) => {
     let dataTemp = [];
     for (const str of callback(name)) {
         // console.log(str) //nilai dari semua element.
+        // disini validasi limit untuk revisi data yang dicari
         // console.log(str.indexOf(string));
         // jika nilai tidak ada maka return  -1, default 0 sampai nemu index array ya.
         if (str.indexOf(string) >= 0) {
@@ -50,6 +51,7 @@ const searchName = (string, dataTo, callback) => {
             }
         }
     }
+
     if (dataTo !== dataTemp.length) {
         // console.log(dataTo);
         // console.log(dataTemp.length);
@@ -58,5 +60,5 @@ const searchName = (string, dataTo, callback) => {
 
     return dataTemp;
 };
-console.log(searchName("an", 3, toLower));
+console.log(searchName("an", 2, toLower));
 // batasan tidak lebih dari nilai
