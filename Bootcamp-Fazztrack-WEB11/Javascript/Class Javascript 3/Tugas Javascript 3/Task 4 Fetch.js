@@ -1,9 +1,11 @@
 const output = document.getElementById("api");
-fetch("https://jsonplaceholder.typicode.com/users")
+const sync = document.getElementById("sync");
+
+fetch("https://jsonplaceholder.typicode.com/users") //proses dijalankan secara Asynchronous
     .then((response) => {
-        return response.json();
-        // console.log(response.status);
-        // console.log(response.json());
+        console.log(response); //untuk debug hasil response
+        if (!response.ok) throw Error(response.status); //check status code jika error
+        return response.json(); // merubah isi respone dengan data json
     })
     .then((data) => {
         console.log(data);
@@ -17,6 +19,8 @@ fetch("https://jsonplaceholder.typicode.com/users")
             </tr>`;
         });
     })
-    .catch((err) => {
-        console.log(err.message);
+    .catch((error) => {
+        console.log(error.message);
     });
+
+sync.innerText = "Test ini adalah Synchronous";

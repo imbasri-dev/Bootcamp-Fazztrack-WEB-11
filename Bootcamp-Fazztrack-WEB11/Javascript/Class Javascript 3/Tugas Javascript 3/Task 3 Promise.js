@@ -27,7 +27,7 @@ const play = (goodNetwork) => {
             console.log(error.message);
         });
 };
-play(false);
+play(false); //call
 //================Try Catch======================
 const janjiNgopi = (loveCoffee) => {
     return new Promise((resolve, reject) => {
@@ -70,3 +70,4 @@ const ngopiCuy = async (loveCoffee) => {
     console.log(await jadwalNgopi(loveCoffee));
 };
 ngopiCuy(true); //trigger function
+//================Try Catch======================

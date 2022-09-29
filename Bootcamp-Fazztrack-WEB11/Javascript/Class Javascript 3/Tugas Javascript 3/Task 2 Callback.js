@@ -1,6 +1,6 @@
 const getMonth = (callback) => {
     setTimeout(() => {
-        let error = true;
+        let error = false;
         let month = [
             "January",
             "Febuary",
@@ -20,7 +20,7 @@ const getMonth = (callback) => {
         } else {
             callback(new Error("Sorry Data Not Found"), []);
         }
-    }, 100);
+    }, 4000);
 };
 const showMonth = (type, month) => {
     if (type == null) {
@@ -28,8 +28,8 @@ const showMonth = (type, month) => {
             console.log(el);
         });
     } else {
-        return console.log(`${type.message},`, month);
+        console.log(`${type.message},`, month);
     }
 };
 getMonth(showMonth);
-// console.log(getMonth(showMonth));
+// cetak output semua bulan dengan method map jika tidak error, jika error cetak error messagenya
