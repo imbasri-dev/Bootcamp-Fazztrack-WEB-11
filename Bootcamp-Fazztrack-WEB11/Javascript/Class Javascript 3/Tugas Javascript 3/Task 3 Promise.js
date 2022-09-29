@@ -37,7 +37,7 @@ const janjiNgopi = (loveCoffee) => {
             }
             const jadwal = {
                 destination: "Warung Bu Yuli",
-                date: new Date().getDay(),
+                date: new Date().getDay(), //hari sekarang sesuai locale time
                 hour: new Date().getHours(),
             };
             return resolve(jadwal);
