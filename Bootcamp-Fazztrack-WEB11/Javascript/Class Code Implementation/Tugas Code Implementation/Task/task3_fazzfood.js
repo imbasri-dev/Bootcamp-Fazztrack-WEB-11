@@ -32,7 +32,7 @@ Potongan: ${disc}
 Biaya Antar: ${km}
 SubTotal: ${harga - disc + km}`;
 };
-// beda function
+//
 const disctance = (jarak) => {
     if (jarak >= 2) {
         return 5000 + (jarak - 2) * 3000;
