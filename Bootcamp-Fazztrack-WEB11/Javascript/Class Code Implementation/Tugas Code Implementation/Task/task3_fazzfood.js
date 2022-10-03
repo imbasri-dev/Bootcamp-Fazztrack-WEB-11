@@ -1,14 +1,4 @@
-// FazzFood(harga, voucher, jarak, pajak)
-/*
-Example :
-Input : FazzFood(75000, ‘FAZZFOOD50’, 5, true)
-Output : Harga : 75000
-Potongan : 37500
-Biaya Antar : 14000
-Pajak : 3750
-SubTotal : 55250
- */
-
+// FazzFood
 const fazzFood = (harga, voucher, jarak, pajak) => {
     if (typeof harga !== "number") return "input harga harus number";
     if (typeof voucher !== "string") return "input voucher harus string";
@@ -34,7 +24,7 @@ SubTotal: ${harga - disc + km}`;
 };
 //
 const disctance = (jarak) => {
-    if (jarak >= 2) {
+    if (jarak > 2) {
         return 5000 + (jarak - 2) * 3000;
     }
     return 5000;
@@ -60,3 +50,4 @@ const discount = (harga, voucher) => {
     return (harga = 0);
 };
 console.log(fazzFood(75000, "FAZZFOOD50", 5, true));
+console.log(fazzFood(25000, "FAZZFOOD60", 2, false));
