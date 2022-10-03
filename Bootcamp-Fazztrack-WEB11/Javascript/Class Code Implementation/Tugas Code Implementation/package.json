@@ -1,0 +1,15 @@
+{
+    "name": "tugas-code-implementation",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "palindrome": "node ./Task/task1_palindrome.js",
+        "konsonan": "node ./Task/task2_konsonan.js",
+        "fazzfood": "node ./Task/task3_fazzfood.js",
+        "divider": "node ./Task/task4_dividerSort.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
