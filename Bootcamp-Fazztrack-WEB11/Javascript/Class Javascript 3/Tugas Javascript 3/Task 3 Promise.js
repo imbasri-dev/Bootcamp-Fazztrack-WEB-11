@@ -27,7 +27,7 @@ const play = (goodNetwork) => {
             console.log(error.message);
         });
 };
-play(false); //call
+// play(true); //call
 //================Try Catch======================
 const janjiNgopi = (loveCoffee) => {
     return new Promise((resolve, reject) => {

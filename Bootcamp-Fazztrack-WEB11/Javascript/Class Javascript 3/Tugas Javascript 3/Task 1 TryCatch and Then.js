@@ -10,7 +10,7 @@ const cekHariKerja = (day) => {
             } else {
                 reject(new Error("Hari ini bukan hari kerja"));
             }
-        }, 3000);
+        }, 1000);
     });
 };
 
@@ -36,8 +36,7 @@ proses melalui callback reject dan diterima melalui catch untuk mendapatkan outp
  */
 
 //untuk testing then catch
-// const callDay = (hari) => checkDay(hari);
-// callDay("senin"); // trigger func then catch
+// checkDay("mi");
 
 // menggunakan try catch
 const hariKerja = async (day, callback) => {
@@ -52,7 +51,6 @@ const hariKerja = async (day, callback) => {
         return error.message;
     }
 };
-
 /* saya membuat deklarasi hariKerja arrow function yang menggunakan async dan menerima parameter (day,callback) serta try catch
 untuk error handling promises , saya membuat validasi pada parameter (day,callback) jika error maka akan langsung throw / lempar
 error dengan message tersebut, dan langsung berhentikan proses, jika tidak ada error maka saya membuat variabel response
@@ -63,4 +61,4 @@ dengan message tersebut,jika promises rejected maka akan diproses dicatch dengan
 const call = async (hari) => {
     console.log(await hariKerja(hari, cekHariKerja));
 };
-call("senin"); //trigger func async await
+call("minggu"); //trigger func async await
