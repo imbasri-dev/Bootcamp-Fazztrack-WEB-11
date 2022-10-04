@@ -1,5 +1,3 @@
-// FazzFood
-// sebaikknya mengikuti soal jika tidak ada callback , maka buat saja kondisi didalam 1 function.
 const fazzFood = (harga, voucher, jarak, pajak) => {
     if (typeof harga !== "number") return "input harga harus number";
     if (typeof voucher === "null" || voucher === "string")
@@ -60,3 +58,6 @@ console.log(fazzFood(50000, null, 5, true));
 // console.log(fazzFood(75000, "FAZZFOOD50", 5, false));
 // console.log("==================");
 // console.log(fazzFood(25000, "FAZZFOOD60", 2, false));
+
+// evaluasi
+// sebaikknya mengikuti soal jika tidak ada callback parameter  , maka buat saja kondisi didalam 1 function dan perbaiki flowcharts ya.
