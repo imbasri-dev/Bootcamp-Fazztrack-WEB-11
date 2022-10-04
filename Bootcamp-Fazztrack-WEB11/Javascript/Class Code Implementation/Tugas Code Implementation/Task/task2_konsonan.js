@@ -9,7 +9,8 @@ const changeText = (input) => {
     let temp = "";
     for (let i = 0; i < input.length; i++) {
         if (input[i] === "a") {
-            temp += input[i] = "o";
+            temp += "o";
+            // <= bisa menggunakan continue untuk memberhentikan proses dan melanjutkan loopingnya.
         } else {
             temp += input[i];
         }

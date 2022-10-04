@@ -1,7 +1,3 @@
-/*
-Deteksi Palindrom Diberikan sebuah teks periksa apakah kata tersebut adalah palindrome atau bukan
-Example :Input : cekPalindrom(‘malam’) Output : Palindrom
-*/
 // cekPalindrom
 const cekPalindrom = (str) => {
     if (typeof str !== "string" || str === "")
@@ -12,6 +8,6 @@ const cekPalindrom = (str) => {
         }
         return "Palindrome";
     }
-    return "input str dengan benar";
 };
 console.log(cekPalindrom("oppo"));
+console.log(cekPalindrom("bapak"));
